@@ -10,6 +10,7 @@ and [fisk](https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#f
 Recently completions for kubectl and helm had been added using ths two repos:
 - [fish-kubectl-completions(https://github.com/evanlucas/fish-kubectl-completions)
 - [Helm Completion Fish](https://helm.sh/docs/helm/helm_completion_fish/)
+- [Minikube Completion](https://minikube.sigs.k8s.io/docs/commands/completion/)
 
 ## Inspiration
 
