@@ -1,2 +1,3 @@
 functions/fish_prompt.fish
 completions/kubectl.fish
+fish_variables
