@@ -13,11 +13,11 @@ set fish_greeting
 set PATH ~/.gem/ruby/2.7.0/bin $PATH
 
 # Golang
-set GOPATH ~/go
-set PATH ~/go/bin $PATH
+set GOPATH $HOME/go
+set PATH $HOME/go/bin $PATH
 
 # .bin
-set PATH ~/.bin $PATH
+set PATH $HOME/.bin $PATH
 
 # User paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
