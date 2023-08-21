@@ -6,7 +6,7 @@ if type -q exa
   alias llta "llt -a"
 end
 
-# Fish greeting
+# Disable Fish greeting
 set fish_greeting
 
 # Ruby 
