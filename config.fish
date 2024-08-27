@@ -13,8 +13,7 @@ set fish_greeting
 set PATH ~/.gem/ruby/2.7.0/bin $PATH
 
 # Golang
-set GOPATH $HOME/go
-set PATH $HOME/go/bin $PATH
+if [ -d $HOME/go ]; set GOPATH $HOME/go; set PATH $HOME/go/bin $PATH; end
 
 # bin
 set PATH $HOME/bin $PATH
