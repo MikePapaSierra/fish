@@ -16,6 +16,8 @@ if [ -d $HOME/go ]; set GOPATH $HOME/go; set PATH $HOME/go/bin $PATH; end
 
 # bin
 set PATH $HOME/bin $PATH
+# AWS CLI completion
+test -x (which aws_completer); and complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
 # User paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
