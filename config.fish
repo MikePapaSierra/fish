@@ -24,3 +24,5 @@ test -x (which aws_completer); and complete --command aws --no-files --arguments
 # User paths
 set -g fish_user_paths "/usr/local/opt/icu4c/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/icu4c/sbin" $fish_user_paths
+# Run Starship
+starship init fish | source
