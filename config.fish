@@ -5,6 +5,11 @@ if type -q exa
   alias lt "eza --tree --level=2"
 end
 
+# Go to Obsidian vault
+if [ -d $HOME/Documents/personalObsidianVault ]
+    alias ov "cd $HOME/Documents/personalObsidianVault"
+end
+
 # Disable Fish greeting
 set fish_greeting
 
