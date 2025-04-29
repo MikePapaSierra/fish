@@ -1,52 +1,62 @@
-# fish-config
+# Fish Shell Configuration
 
-Fish shell configuration
+![Made with Fish Shell](https://img.shields.io/badge/Made%20with-Fish%20Shell-4C91F0?logo=fishshell&logoColor=white)
+![Plugin Manager: Fisher](https://img.shields.io/badge/Plugin%20Manager-Fisher-00ACC1)
+![Prompt: Starship](https://img.shields.io/badge/Prompt-Starship-7D4CDB)
+![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Config only](https://img.shields.io/badge/Configuration-Personal-informational)
 
-## Custom configuration
+This repository contains my personal [Fish shell](https://fishshell.com/) configuration.
 
-Configuration is using [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
-and [fisk](https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md#fisk) theme.
+It uses:
+- [Fisher](https://github.com/jorgebucaran/fisher) as the plugin manager
+- [Starship](https://starship.rs/) as the prompt
 
-Recently completions for kubectl and helm had been added using ths two repos:
-- [fish-kubectl-completions](https://github.com/evanlucas/fish-kubectl-completions)
-- [Helm Completion Fish](https://helm.sh/docs/helm/helm_completion_fish/)
-- [Minikube Completion](https://minikube.sigs.k8s.io/docs/commands/completion/)
+## Purpose
 
-## Plugins
+This setup is tailored to my workflow and preferences. It's made public for reference and inspiration purposes. Feel free to **fork** and **customize** it for your own needs!
 
-I'm using couple addiltional plugins, and that's just a matter of the
-preferances.
+> **Note:** I do not accept contributions to this repository, as it is intended for personal use.
 
-Oh-my-fish plugins:
-- [plugin-bang-bang](https://github.com/oh-my-fish/plugin-bang-bang) - Bang-bang
-  functionality for Fish shell.
-- [plugin-aws](https://github.com/oh-my-fish/plugin-aws) - AWS CLI completion
-  and profile management.
-- [plugin-weather](https://github.com/oh-my-fish/plugin-weather) - display
-  current weather in your location.
-- [plugin-spark](https://github.com/oh-my-fish/plugin-spark) - Plugin weather
-  depends on this plugin.
-- [plugin-grc](https://github.com/oh-my-fish/plugin-grc) - support for grc
-  colorizer in Fish shell.
-- [plugin-battery](https://github.com/oh-my-fish/plugin-battery) - used to display current battery state.
+## Installation
 
-Plugins installed by [Fisher](https://github.com/jorgebucaran/fisher):
-- [Z for Fish](https://github.com/jethrokuan/z)
-- [Peco](https://github.com/peco/peco)
-- [ghq](https://github.com/x-motemen/ghq)
+If you'd like to use or adapt this configuration:
 
-## TODO:
+1. Install Fish shell:  
+   [Installation instructions](https://fishshell.com/docs/current/index.html#installation)
 
-Add information about packages/fonts that need to be installed.
-- Exa
-- grc
-- Nerd Fonts
+2. Install Fisher:
 
-## Inspiration
+    ```fish
+    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+    ```
 
-My main inspiration to create this configuration was stream one of the AWS developer advocate [Darko Mesaros](https://github.com/darko-mesaros).
-Recording from that session can be find [here](https://www.youtube.com/watch?v=kPnYFsXml-I).
+3. Clone this repository and link or copy the configuration files into your `$HOME/.config/fish/` directory.
+
+4. Install plugins listed in the `fish_plugins` file:
+
+    ```fish
+    fisher update
+    ```
+
+5. Install [Starship](https://starship.rs/):
+
+    ```bash
+    curl -sS https://starship.rs/install.sh | sh
+    ```
+6. As an optional step you can use my [Starship configuration](https://github.com/MikePapaSierra/starship).
+
+## Structure
+
+- `config.fish` — main configuration file
+- `functions/` — custom functions
+- `completions/` — completions
+- `fish_plugins` — list of Fisher-managed plugins
+
+## Related
+
+- [Starship Configuration](https://github.com/MikePapaSierra/starship)
 
 ## License
 
-This code is distributed on [MIT License](/LICENSE).
+This project is shared under the [MIT License](LICENSE), but primarily for reference. Fork freely!
