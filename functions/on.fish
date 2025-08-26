@@ -29,16 +29,16 @@ function on
     switch $kind
         case "tlog"
             set path "$base_dir/professional/tlog"
-            set template "$base_dir/templates/tlog.md"
-        case "daily"
-            set path "$base_dir/personal/daily"
-            set template "$base_dir/templates/daily.md"
-        case "logbook"
-            set path "$base_dir/hobby/logbook"
-            set template "$base_dir/templates/logbook.md"
+            set template "$base_dir/templates/TPL_tlog.md"
+        case "dlog"
+            set path "$base_dir/personal/dlog"
+            set template "$base_dir/templates/TPL_dlog.md"
+        case "wlog"
+            set path "$base_dir/hobby/wlog"
+            set template "$base_dir/templates/TPL_wlog.md"
         case "*"
             echo "❌ Unknown note type: $kind"
-            echo "Usage: on [tlog|daily|logbook] [today|yesterday|tomorrow]"
+            echo "Usage: on [tlog|dlog|wlog] [today|yesterday|tomorrow]"
             return 1
     end
 
