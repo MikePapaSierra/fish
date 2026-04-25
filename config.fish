@@ -24,3 +24,16 @@ test -x (which aws_completer); and complete --command aws --no-files --arguments
 
 # Run Starship
 starship init fish | source
+
+if not set -q GEMINI_API_KEY
+  if type -q op
+    set -l gemini_api_key (op read "op://Private/Gemini API Key")
+    if test $status -eq 0
+      set -gx GEMINI_API_KEY $gemini_api_key
+    else if status is-interactive
+      echo "Failed to load GEMINI_API_KEY from 1Password." >&2
+    end
+  end
+end
+
+set -gx PATH $HOME/.local/node_modules/.bin $PATH

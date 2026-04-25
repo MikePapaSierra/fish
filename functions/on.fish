@@ -1,16 +1,9 @@
 function on
     set -l base_dir "$HOME/Documents/personalObsidianVault/"
 
-    # Parse first argument: note kind
+    # Parse argument: when (today|yesterday|tomorrow)
     if count $argv >= 1
-        set kind (string lower -- $argv[1])
-    else
-        set kind "tlog"
-    end
-
-    # Parse second argument: when
-    if count $argv >= 2
-        set raw_when (string lower -- $argv[2])
+        set raw_when (string lower -- $argv[1])
     else
         set raw_when "today"
     end
@@ -25,22 +18,9 @@ function on
             set date_str (date "+%Y-%m-%d")
     end
 
-    # Determine paths based on note kind
-    switch $kind
-        case "tlog"
-            set path "$base_dir/professional/tlog"
-            set template "$base_dir/templates/TPL_tlog.md"
-        case "dlog"
-            set path "$base_dir/personal/dlog"
-            set template "$base_dir/templates/TPL_dlog.md"
-        case "wlog"
-            set path "$base_dir/hobby/wlog"
-            set template "$base_dir/templates/TPL_wlog.md"
-        case "*"
-            echo "❌ Unknown note type: $kind"
-            echo "Usage: on [tlog|dlog|wlog] [today|yesterday|tomorrow]"
-            return 1
-    end
+    # Set path for daily notes
+    set path "$base_dir/daily"
+    set template "$base_dir/templates/TPL_Daily.md"
 
     # Ensure directory exists
     mkdir -p $path
@@ -52,9 +32,11 @@ function on
             cp $template $file
         else
             echo "---" > $file
-            echo "tags: [$kind]" >> $file
+            echo "tags: [daily-notes]" >> $file
             echo "date: $date_str" >> $file
             echo "---" >> $file
+            echo "" >> $file
+            echo "# $date_str - Daily Note" >> $file
             echo "" >> $file
         end
     end
