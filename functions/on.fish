@@ -1,5 +1,5 @@
 function on
-    set -l base_dir "$HOME/Documents/personalObsidianVault/"
+    set -l base_dir "$HOME/second-brain/vaults/personal-obsidian-vault/"
 
     # Parse argument: when (today|yesterday|tomorrow)
     if count $argv >= 1
@@ -19,7 +19,7 @@ function on
     end
 
     # Set path for daily notes
-    set path "$base_dir/daily"
+    set path "$base_dir/00-daily"
     set template "$base_dir/templates/TPL_Daily.md"
 
     # Ensure directory exists
