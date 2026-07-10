@@ -6,8 +6,13 @@ if type -q exa
 end
 
 # Go to Obsidian vault
-if [ -d $HOME/Documents/personalObsidianVault ]
-    alias ov "cd $HOME/Documents/personalObsidianVault"
+if [ -d $HOME/second-brain/vaults/personal-obsidian-vault ]
+    alias ov "cd $HOME/second-brain/vaults/personal-obsidian-vault"
+end
+
+# Go to AI/agent notes (context, instructions, session summaries)
+if [ -d $HOME/second-brain/agents ]
+    alias oa "cd $HOME/second-brain/agents"
 end
 
 # Disable Fish greeting

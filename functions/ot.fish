@@ -1,6 +1,6 @@
 function ot
     set args $argv
-    set tasks_file \"$HOME/Documents/personalObsidianVault/tasks.md\"
+    set tasks_file \"$HOME/second-brain/vaults/personal-obsidian-vault/tasks.md\"
 
     if not test -f $tasks_file
         touch $tasks_file
